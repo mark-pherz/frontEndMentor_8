@@ -1,0 +1,128 @@
+:root {
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+  --transparent-white: hsla(0, 0%, 100%, 0.75);
+  --very-light-gray: hsl(0, 0%, 95%);
+}
+
+@font-face {
+  font-family: "regular";
+  src: url("./LexendDeca-Regular.ttf");
+}
+
+@font-face {
+  font-family: "bold";
+  src: url("./BigShouldersDisplay-Bold.ttf");
+}
+
+body {
+  background-color: var(--very-light-gray);
+}
+
+main {
+  padding: 5rem 1rem 3rem;
+}
+
+.cards {
+  margin: 0 auto;
+  max-width: 24rem;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.3);
+  border-radius: 0.5rem;
+}
+
+.card {
+  padding: 3rem;
+}
+
+.card:first-child {
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+.card:last-child {
+  border-radius: 0 0 0.5rem 0.5rem;
+}
+
+.card--orange {
+  background-color: var(--bright-orange);
+}
+
+.card--cyan {
+  background-color: var(--dark-cyan);
+}
+
+.card--dark-cyan {
+  background-color: var(--very-dark-cyan);
+}
+
+.card__title {
+  text-transform: uppercase;
+  font-family: "bold";
+  color: var(--very-light-gray);
+  margin: 1.75rem 0;
+  font-size: 2rem;
+}
+
+.card__paragraph {
+  color: var(--transparent-white);
+  font-family: "regular";
+  line-height: 1.6;
+  font-size: 0.875rem;
+  margin-bottom: 1.875rem;
+}
+
+.card__button {
+  text-decoration: none;
+  background-color: var(--very-light-gray);
+  padding: 0.75rem 2rem;
+  border-radius: 100rem;
+  font-family: "regular";
+  text-transform: capitalize;
+  display: inline-block;
+  margin-top: 2rem;
+}
+
+.card__button--orange {
+  color: var(--bright-orange);
+}
+
+.card__button--cyan {
+  color: var(--dark-cyan);
+}
+
+.card__button--dark-cyan {
+  color: var(--very-dark-cyan);
+}
+
+@media (min-width: 900px) {
+  main {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .cards {
+    display: flex;
+    width: min(900px, 90%);
+    min-height: 30rem;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 1 0 160px;
+  }
+
+  .card__button {
+    margin-top: auto;
+  }
+
+  .card:first-child {
+    border-radius: 0.5rem 0 0 0.5rem;
+  }
+
+  .card:last-child {
+    border-radius: 0 0.5rem 0.5rem 0;
+  }
+}

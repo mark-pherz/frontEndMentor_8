@@ -81,6 +81,15 @@ main {
   margin-top: 2rem;
 }
 
+.card__button:hover,
+.card__button:active {
+  color: var(--transparent-white);
+  background-color: transparent;
+  border: 0.125rem solid var(--transparent-white);
+  padding: 0.625rem 1.875rem;
+  box-sizing: initial;
+}
+
 .card__button--orange {
   color: var(--bright-orange);
 }
